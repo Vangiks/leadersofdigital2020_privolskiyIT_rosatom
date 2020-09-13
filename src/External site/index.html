@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script src="http://1cpubl.mkskom.ru/Khakaton2020_ShupenevIE/ru_RU//scripts/webclient1ce.js"></script>
+</head>
+
+<Header>
+    <div>
+        <a href="https://leadersofdigital.ru/">
+            <img src="assets/img/leadersofdigital_logo.svg" alt="dp logo">
+        </a>
+        <a href="https://rsv.ru/main/RMain">
+            <img src="assets/img/rsv_logo.svg" alt="rsv logo">
+        </a>
+    </div>
+</Header>
+
+<body class="main_body" onload="init();">
+    <div id="webClientContainer" align="center"></div>
+    <script>
+        var webClient = null;
+        var init = function () {
+            webClient = new WebClient1CE('webClientContainer',
+                {
+                    webClientURL: 'http://1cpubl.mkskom.ru/Khakaton2020_ShupenevIE/ru_RU//?MainWindowMode=EmbeddedWorkplace',
+                    width: '70%',
+                    height: '800px'
+                });
+        };
+    </script>
+</body>
