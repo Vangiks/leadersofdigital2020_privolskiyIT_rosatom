@@ -27,6 +27,7 @@
 		
 	КонецЕсли;
 	
+	УстановитьПривилегированныйРежим(Истина);
 	
 	ПространствоИмен = Метаданные.ПакетыXDTO.EPCOPackageExchange.ПространствоИмен;
 	
@@ -36,7 +37,10 @@
 	типBank          = ФабрикаXDTO.Тип(ПространствоИмен, "Bank");
 	типContract      = ФабрикаXDTO.Тип(ПространствоИмен, "Contract");
 	
+	типBanksList     = ФабрикаXDTO.Тип(ПространствоИмен, "BanksList");
 	типBanksRow      = ФабрикаXDTO.Тип(ПространствоИмен, "BanksRow");
+	
+	типContractsList = ФабрикаXDTO.Тип(ПространствоИмен, "ContractsList");
 	типContractsRow  = ФабрикаXDTO.Тип(ПространствоИмен, "ContractsRow");
 	
 	
@@ -122,6 +126,7 @@
 	Package = ФабрикаXDTO.Создать(типPackage);
 	Package.Organization = СформироватьOrganization(ВыборкаОрганизации, типOrganization);
 	
+	BanksList = ФабрикаXDTO.Создать(типBanksList);
 	Пока ВыборкаОстаткиПоСчетам.Следующий() Цикл
 		
 		BanksRow = ФабрикаXDTO.Создать(типBanksRow);
@@ -130,9 +135,13 @@
 		BanksRow.Organization = СформироватьOrganization(ВыборкаОстаткиПоСчетам, типOrganization);
 		BanksRow.Bank = СформироватьBank(ВыборкаОстаткиПоСчетам, типBank);
 		
-		Package.BanksList.Добавить(BanksRow);
+		BanksList.BanksRow.Добавить(BanksRow);
 	КонецЦикла;
 	
+	Package.BanksList = BanksList;
+	
+	
+	ContractsList = ФабрикаXDTO.Создать(типContractsList);
 	Пока ВыборкаФинансовыеСделки.Следующий() Цикл
 		
 		ContractsRow = ФабрикаXDTO.Создать(типContractsRow);
@@ -141,8 +150,11 @@
 		ContractsRow.Organization = СформироватьOrganization(ВыборкаФинансовыеСделки, типOrganization);
 		ContractsRow.Contract = СформироватьContract(ВыборкаФинансовыеСделки, типContract);
 		
-		Package.ContractsList.Добавить(ContractsRow);
+		ContractsList.ContractsRow.Добавить(ContractsRow);
 	КонецЦикла;
+	
+	Package.ContractsList = ContractsList;
+	
 	
 	МойXML = Новый ЗаписьXML; 
 	МойXML.УстановитьСтроку();

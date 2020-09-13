@@ -2600,7 +2600,7 @@
 		<Metadata name="DefinedType.ПрисоединенныйФайл" id="bef6081e-f377-41d6-83a1-b0e218a3fb46" configVersion="4f074c0e0d06b14cac2a6b8f1f6c030e00000000"/>
 		<Metadata name="DefinedType.ПрисоединенныйФайлОбъект" id="9b67bfd5-ef23-4205-b7ba-9466517e9999" configVersion="706bf0f67a42984586b7fc79b70c18df00000000"/>
 		<Metadata name="DefinedType.ФизическоеЛицо" id="46b0a5b3-1fa7-44ff-a941-c6de47d36e77" configVersion="c02428f136b1864dbe79a06f0d3a0e2000000000"/>
-		<Metadata name="Document.ЭД_ЭлектронныйДокумент" id="1d5c23b5-a895-4cb7-abd2-3d539062a464" configVersion="180958a971db2447bfe9e03855cf72ba00000000">
+		<Metadata name="Document.ЭД_ЭлектронныйДокумент" id="1d5c23b5-a895-4cb7-abd2-3d539062a464" configVersion="b48290344b475043a6111555e55191c400000000">
 			<Metadata name="Document.ЭД_ЭлектронныйДокумент.TabularSection.ОстаткиПоСчетам.Attribute.Валюта" id="0efeec77-0fb9-40f3-aa2f-486495b10f2a"/>
 			<Metadata name="Document.ЭД_ЭлектронныйДокумент.Attribute.ДатаВыгрузки" id="3c7953ed-0be5-40db-bbd8-5651b5a97ad8"/>
 			<Metadata name="Document.ЭД_ЭлектронныйДокумент.TabularSection.ФинансовыеСделки" id="5bac52df-ae6e-41e8-8f03-53d9ba4c9316"/>
@@ -2616,9 +2616,9 @@
 			<Metadata name="Document.ЭД_ЭлектронныйДокумент.TabularSection.ОстаткиПоСчетам.Attribute.Банк" id="e3943c92-a2c3-4ad3-aa0e-592a2d8053d8"/>
 			<Metadata name="Document.ЭД_ЭлектронныйДокумент.Attribute.Автор" id="fc07fe2f-790e-415e-aceb-6c9fd536360b"/>
 		</Metadata>
-		<Metadata name="Document.ЭД_ЭлектронныйДокумент.Form.ФормаДокумента" id="5ab11cba-dff5-4ada-aa96-d40dcb855fdc" configVersion="e9cec0b0069dd14bbb43e9fa88d14e7300000000"/>
-		<Metadata name="Document.ЭД_ЭлектронныйДокумент.Form.ФормаДокумента.Form" id="5ab11cba-dff5-4ada-aa96-d40dcb855fdc.0" configVersion="63f8dd8117e03d409f42a2ffea8c295900000000"/>
-		<Metadata name="Document.ЭД_ЭлектронныйДокумент.ManagerModule" id="1d5c23b5-a895-4cb7-abd2-3d539062a464.2" configVersion="6ff4356b87582444b0f586e5958a303b00000000"/>
+		<Metadata name="Document.ЭД_ЭлектронныйДокумент.Form.ФормаДокумента" id="5ab11cba-dff5-4ada-aa96-d40dcb855fdc" configVersion="c0393389be61184fbb0021f6d203ca3900000000"/>
+		<Metadata name="Document.ЭД_ЭлектронныйДокумент.Form.ФормаДокумента.Form" id="5ab11cba-dff5-4ada-aa96-d40dcb855fdc.0" configVersion="d9819974cd959745a1de3050cfff11a900000000"/>
+		<Metadata name="Document.ЭД_ЭлектронныйДокумент.ManagerModule" id="1d5c23b5-a895-4cb7-abd2-3d539062a464.2" configVersion="d756e00f9d17ab488388a3bd16b3154d00000000"/>
 		<Metadata name="Document.ЭД_ЭлектронныйДокумент.ObjectModule" id="1d5c23b5-a895-4cb7-abd2-3d539062a464.0" configVersion="696b9e103e38bc4a84aee092d3e59f0600000000"/>
 		<Metadata name="Document.ЭД_ЭлектронныйДокумент.Template.Макет" id="2f8f93e5-6c01-41c2-b103-4a45ad8a1739" configVersion="57ec11862236474e8f4406ef8d7be9cc00000000"/>
 		<Metadata name="Document.ЭД_ЭлектронныйДокумент.Template.Макет.Template" id="2f8f93e5-6c01-41c2-b103-4a45ad8a1739.0" configVersion="bb2643c79321724599b1c1d463270e1500000000"/>
@@ -3717,8 +3717,8 @@
 		<Metadata name="XDTOPackage.DataArtefacts_ServiceUsers_1_0_0_1.Package" id="c53b9e19-54e4-49b4-ac63-eaeee5c2e040.0" configVersion="bd4f90c0cfc8c94eafe5bbceb893987600000000"/>
 		<Metadata name="XDTOPackage.DataDump_1_0_2_1" id="47afc45d-719e-4740-a8aa-6157c4b1aea8" configVersion="9855c107f9ecb646ae1aef52805f79f700000000"/>
 		<Metadata name="XDTOPackage.DataDump_1_0_2_1.Package" id="47afc45d-719e-4740-a8aa-6157c4b1aea8.0" configVersion="f936fa5adf414849b5abac28913a5c5900000000"/>
-		<Metadata name="XDTOPackage.EPCOPackageExchange" id="918e58de-f048-409f-8003-5392d01f663d" configVersion="c419ee99e6a6fc4c85e536030a84a7c800000000"/>
-		<Metadata name="XDTOPackage.EPCOPackageExchange.Package" id="918e58de-f048-409f-8003-5392d01f663d.0" configVersion="53e1cc231299454e9bc451befa91ec4300000000"/>
+		<Metadata name="XDTOPackage.EPCOPackageExchange" id="918e58de-f048-409f-8003-5392d01f663d" configVersion="7a3fd00d58a1f54e90f07b9fb36f75a800000000"/>
+		<Metadata name="XDTOPackage.EPCOPackageExchange.Package" id="918e58de-f048-409f-8003-5392d01f663d.0" configVersion="2ea3d0c8815dde4eb56bbc27101ff5f300000000"/>
 		<Metadata name="XDTOPackage.Сообщения" id="c86aa97a-5898-4cb2-ae62-598bddf8e99f" configVersion="29da07340fa33d419950828a9c955fe500000000"/>
 		<Metadata name="XDTOPackage.Сообщения.Package" id="c86aa97a-5898-4cb2-ae62-598bddf8e99f.0" configVersion="7da38b545f060745a423b7d9bb2b9ad700000000"/>
 	</ConfigVersions>
