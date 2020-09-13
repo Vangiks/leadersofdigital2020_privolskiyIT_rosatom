@@ -6,6 +6,11 @@
 			<xs:element name="INN" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:complexType name="BanksList">
+		<xs:sequence>
+			<xs:element name="BanksRow" type="tns:BanksRow" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="BanksRow">
 		<xs:sequence>
 			<xs:element name="Organization" type="tns:Organization"/>
@@ -22,6 +27,11 @@
 			<xs:element name="Date" type="xs:date"/>
 			<xs:element name="StartDate" type="xs:date"/>
 			<xs:element name="EndDate" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContractsList">
+		<xs:sequence>
+			<xs:element name="ContractsRow" type="tns:ContractsRow" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ContractsRow">
@@ -42,8 +52,8 @@
 	<xs:complexType name="Package">
 		<xs:sequence>
 			<xs:element name="Organization" type="tns:Organization"/>
-			<xs:element name="BanksList" type="tns:BanksRow" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="ContractsList" type="tns:ContractsRow" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="BanksList" type="tns:BanksList"/>
+			<xs:element name="ContractsList" type="tns:ContractsList"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="TypeSum15_2">
