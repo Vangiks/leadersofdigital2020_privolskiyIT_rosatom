@@ -1,0 +1,60 @@
+﻿<Package xmlns="urn://epco/epcopackageexchange/0.0.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Organization>
+		<ID>0000000001</ID>
+		<Name>АО «Росэнергоатом»</Name>
+		<INN>7721632827</INN>
+		<KPP>997650001</KPP>
+	</Organization>
+	<BanksList>
+		<BanksRow>
+			<Organization>
+				<ID>0000000001</ID>
+				<Name>АО «Росэнергоатом»</Name>
+				<INN>7721632827</INN>
+				<KPP>997650001</KPP>
+			</Organization>
+			<Bank>
+				<Name>АГРОРОС</Name>
+				<BIK/>
+				<INN/>
+			</Bank>
+			<Currency>AUD</Currency>
+			<Sum>100</Sum>
+			<Comment/>
+		</BanksRow>
+		<BanksRow>
+			<Organization>
+				<ID>0000000001</ID>
+				<Name>АО «Росэнергоатом»</Name>
+				<INN>7721632827</INN>
+				<KPP>997650001</KPP>
+			</Organization>
+			<Bank>
+				<Name>АГРОИНКОМБАНК</Name>
+				<BIK/>
+				<INN/>
+			</Bank>
+			<Currency>AUD</Currency>
+			<Sum>500</Sum>
+			<Comment/>
+		</BanksRow>
+	</BanksList>
+	<ContractsList>
+		<ContractsRow>
+			<Organization>
+				<ID>0000000001</ID>
+				<Name>АО «Росэнергоатом»</Name>
+				<INN>7721632827</INN>
+				<KPP>997650001</KPP>
+			</Organization>
+			<Contract>
+				<Name>Депозит №321</Name>
+				<Currency>AUD</Currency>
+				<Date>2020-09-15</Date>
+				<StartDate>2020-09-15</StartDate>
+				<EndDate>2022-09-15</EndDate>
+			</Contract>
+			<Sum>500</Sum>
+		</ContractsRow>
+	</ContractsList>
+</Package>
