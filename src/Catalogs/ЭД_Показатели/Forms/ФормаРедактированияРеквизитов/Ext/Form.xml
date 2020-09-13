@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="УстановитьРеквизиты" id="49">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultItem>true</DefaultItem>
+				<CommandName>Form.Command.Записать</CommandName>
+				<BackColor>#CCFFCC</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Picture>
+					<xr:Ref>StdPicture.EndEdit</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="УстановитьРеквизитыРасширеннаяПодсказка" id="50"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСтрокаЭД" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа строка ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа строка ЭД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтрокаЭДРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<CheckBoxField name="СтрокаЭДВыбор" id="4">
+					<DataPath>СтрокаЭДВыбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="СтрокаЭДВыборКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СтрокаЭДВыборРасширеннаяПодсказка" id="6"/>
+				</CheckBoxField>
+				<InputField name="СтрокаЭД" id="1">
+					<DataPath>СтрокаЭД</DataPath>
+					<ContextMenu name="СтрокаЭДКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СтрокаЭДРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">СтрокаЭДПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКолонкаОтчета" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонка отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкаОтчетаРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<CheckBoxField name="КолонкаЭДВыбор" id="90">
+					<DataPath>КолонкаОтчетаВыбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КолонкаЭДВыборКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="КолонкаЭДВыборРасширеннаяПодсказка" id="92"/>
+				</CheckBoxField>
+				<InputField name="КолонкаЭД" id="87">
+					<DataPath>КолонкаЭД</DataPath>
+					<ContextMenu name="КолонкаЭДКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="КолонкаЭДРасширеннаяПодсказка" id="89"/>
+					<Events>
+						<Event name="OnChange">КолонкаЭДПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДлина" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа длина</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДлинаРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<CheckBoxField name="ДлинаВыбор" id="19">
+					<DataPath>ДлинаВыбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДлинаВыборКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДлинаВыборРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+				<InputField name="Длина" id="22">
+					<DataPath>Длина</DataPath>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<MaxValue xsi:type="xs:decimal">24</MaxValue>
+					<ContextMenu name="ДлинаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДлинаРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ДлинаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТочность" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа точность</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТочностьРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<CheckBoxField name="ТочностьВыбор" id="14">
+					<DataPath>ТочностьВыбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТочностьВыборКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТочностьВыборРасширеннаяПодсказка" id="16"/>
+				</CheckBoxField>
+				<InputField name="Точность" id="11">
+					<DataPath>Точность</DataPath>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">0</MinValue>
+					<MaxValue xsi:type="xs:decimal">7</MaxValue>
+					<ContextMenu name="ТочностьКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ТочностьРасширеннаяПодсказка" id="13"/>
+					<Events>
+						<Event name="OnChange">ТочностьПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНеМасштабировать" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа не масштабировать</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНеМасштабироватьРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<CheckBoxField name="НеМасштабироватьВыбор" id="27">
+					<DataPath>НеМасштабируетсяВыбор</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеМасштабироватьВыборКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="НеМасштабироватьВыборРасширеннаяПодсказка" id="29"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеМасштабировать" id="30">
+					<DataPath>НеМасштабируется</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеМасштабироватьКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="НеМасштабироватьРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="OnChange">НеМасштабироватьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="тзПоказатели" id="51">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>тзПоказатели</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="тзПоказателиКонтекстноеМеню" id="52"/>
+			<AutoCommandBar name="тзПоказателиКоманднаяПанель" id="53"/>
+			<ExtendedTooltip name="тзПоказателиРасширеннаяПодсказка" id="54"/>
+			<SearchStringAddition name="тзПоказателиСтрокаПоиска" id="55">
+				<AdditionSource>
+					<Item>тзПоказатели</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="тзПоказателиСтрокаПоискаКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="тзПоказателиСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="тзПоказателиСостояниеПросмотра" id="58">
+				<AdditionSource>
+					<Item>тзПоказатели</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="тзПоказателиСостояниеПросмотраКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="тзПоказателиСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="тзПоказателиУправлениеПоиском" id="61">
+				<AdditionSource>
+					<Item>тзПоказатели</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="тзПоказателиУправлениеПоискомКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="тзПоказателиУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="тзПоказателиПоказатель" id="64">
+					<DataPath>тзПоказатели.Показатель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзПоказателиПоказательКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="тзПоказателиПоказательРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="тзПоказателиПоказательВладелец" id="67">
+					<DataPath>тзПоказатели.Показатель.Owner</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модель</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзПоказателиПоказательВладелецКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="тзПоказателиПоказательВладелецРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="тзПоказателиПоказательСтрокаЭД" id="82">
+					<DataPath>тзПоказатели.Показатель.СтрокаЭД</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзПоказателиПоказательСтрокаЭДКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="тзПоказателиПоказательСтрокаЭДРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="тзПоказателиПоказательКолонкаЭД" id="93">
+					<DataPath>тзПоказатели.Показатель.КолонкаЭД</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзПоказателиПоказательКолонкаЭДКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="тзПоказателиПоказательКолонкаЭДРасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<InputField name="тзПоказателиПоказательДлина" id="70">
+					<DataPath>тзПоказатели.Показатель.Длина</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзПоказателиПоказательДлинаКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="тзПоказателиПоказательДлинаРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="тзПоказателиПоказательТочность" id="73">
+					<DataPath>тзПоказатели.Показатель.Точность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзПоказателиПоказательТочностьКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="тзПоказателиПоказательТочностьРасширеннаяПодсказка" id="75"/>
+				</InputField>
+				<CheckBoxField name="тзПоказателиПоказательНеМасштабируется" id="79">
+					<DataPath>тзПоказатели.Показатель.НеМасштабируется</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="тзПоказателиПоказательНеМасштабируетсяКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="тзПоказателиПоказательНеМасштабируетсяРасширеннаяПодсказка" id="81"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СтрокаЭД" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЭД_Строки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаЭДВыбор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка ЭДВыбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Точность" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Длина" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлинаВыбор" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длина выбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТочностьВыбор" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точность выбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НеМасштабируется" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не масштабируется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НеМасштабируетсяВыбор" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не масштабируется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="тзПоказатели" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тз показатели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Показатель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЭД_Показатели</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МодельЭД" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель ЭД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЭД_Модель</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КолонкаЭД" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка электронного документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЭД_Колонки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КолонкаОтчетаВыбор" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка отчета выбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="МодельЭД">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЭД_Модель</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="сзПоказатели">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

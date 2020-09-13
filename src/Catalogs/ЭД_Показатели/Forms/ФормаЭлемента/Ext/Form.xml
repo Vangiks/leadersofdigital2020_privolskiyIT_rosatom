@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Владелец" id="7">
+			<DataPath>Объект.Owner</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="СтрокаЭД" id="28">
+			<DataPath>Объект.СтрокаЭД</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Отбор.Владелец</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Объект.Owner</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="СтрокаЭДКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="СтрокаЭДРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="КолонкаОтчета" id="10">
+			<DataPath>Объект.КолонкаЭД</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Отбор.Владелец</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Объект.Owner</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="КолонкаОтчетаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КолонкаОтчетаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="СпособОбработки" id="16">
+			<DataPath>Объект.СпособОбработки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СпособОбработкиКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СпособОбработкиРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ТипЗначения" id="34">
+			<DataPath>Объект.ТипЗначения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип значения</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Отбор.Владелец</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Объект.Owner</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="36"/>
+			<Events>
+				<Event name="OnChange">ТипЗначенияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelField name="Длина" id="25">
+			<DataPath>Объект.Длина</DataPath>
+			<Width>5</Width>
+			<ContextMenu name="ДлинаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ДлинаРасширеннаяПодсказка" id="27"/>
+		</LabelField>
+		<LabelField name="Точность" id="22">
+			<DataPath>Объект.Точность</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>5</Width>
+			<ContextMenu name="ТочностьКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ТочностьРасширеннаяПодсказка" id="24"/>
+		</LabelField>
+		<LabelField name="НеМасштабируется" id="19">
+			<DataPath>Объект.НеМасштабируется</DataPath>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>5</Width>
+			<ContextMenu name="НеМасштабируетсяКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="НеМасштабируетсяРасширеннаяПодсказка" id="21"/>
+		</LabelField>
+		<InputField name="СпособАгрегации" id="31">
+			<ContextMenu name="СпособАгрегацииКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="СпособАгрегацииРасширеннаяПодсказка" id="33"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЭД_Показатели</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

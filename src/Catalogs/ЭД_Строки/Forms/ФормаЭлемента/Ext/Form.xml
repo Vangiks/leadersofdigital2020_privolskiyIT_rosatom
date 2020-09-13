@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Синоним" id="35">
+			<DataPath>Объект.Синоним</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="СинонимКонтекстноеМеню" id="36"/>
+			<ExtendedTooltip name="СинонимРасширеннаяПодсказка" id="37"/>
+		</InputField>
+		<InputField name="Владелец" id="7">
+			<DataPath>Объект.Owner</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Порядок" id="32">
+			<DataPath>Объект.Порядок</DataPath>
+			<ContextMenu name="ПорядокКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<CheckBoxField name="ВключатьВСвод" id="38">
+			<DataPath>Объект.ВключатьВСвод</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВключатьВСводКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ВключатьВСводРасширеннаяПодсказка" id="40"/>
+		</CheckBoxField>
+		<Table name="Аналитики" id="10">
+			<Representation>List</Representation>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MaxHeight>5</MaxHeight>
+			<HeightControlVariant>UseHeightInTableRows</HeightControlVariant>
+			<MaxRowsCount>5</MaxRowsCount>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Аналитики</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="АналитикиКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="АналитикиКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="АналитикиРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="АналитикиСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Аналитики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="АналитикиСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="АналитикиСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="АналитикиСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Аналитики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="АналитикиСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="АналитикиСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="АналитикиУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Аналитики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="АналитикиУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="АналитикиУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="АналитикиНомерСтроки" id="23">
+					<DataPath>Объект.Аналитики.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АналитикиНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="АналитикиНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="АналитикиАналитика" id="26">
+					<DataPath>Объект.Аналитики.Аналитика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>АналитикиМодели</xr:Name>
+							<xr:DataPath xsi:type="xs:string">АналитикиМодели</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="АналитикиАналитикаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="АналитикиАналитикаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="АналитикиРеквизитАналитикиДляСортировки" id="29">
+					<DataPath>Объект.Аналитики.РеквизитАналитикиДляСортировки</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="АналитикиРеквизитАналитикиДляСортировкиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="АналитикиРеквизитАналитикиДляСортировкиРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="StartChoice">АналитикиРеквизитАналитикиДляСортировкиНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЭД_Строки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АналитикиМодели" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитики модели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

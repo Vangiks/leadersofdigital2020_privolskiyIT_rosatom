@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Основное" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основное</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Владелец" id="7">
+					<DataPath>Объект.Owner</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Модель</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ТипЗначения" id="65">
+					<DataPath>Объект.ТипЗначения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип значения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТипЗначенияКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ТипЗначенияРасширеннаяПодсказка" id="67"/>
+					<Events>
+						<Event name="OnChange">ТипЗначенияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Длина" id="10">
+					<DataPath>Объект.Длина</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<MaxValue xsi:type="xs:decimal">24</MaxValue>
+					<ContextMenu name="ДлинаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ДлинаРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ДлинаСтроки" id="68">
+					<DataPath>Объект.ДлинаСтроки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">1</MinValue>
+					<MaxValue xsi:type="xs:decimal">500</MaxValue>
+					<ContextMenu name="ДлинаСтрокиКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ДлинаСтрокиРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="Точность" id="13">
+					<DataPath>Объект.Точность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
+					<MinValue xsi:type="xs:decimal">0</MinValue>
+					<MaxValue xsi:type="xs:decimal">7</MaxValue>
+					<ContextMenu name="ТочностьКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ТочностьРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<CheckBoxField name="НеМасштабируется" id="16">
+					<DataPath>Объект.НеМасштабируется</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеМасштабируетсяКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НеМасштабируетсяРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+				<InputField name="КодСортировки" id="19">
+					<DataPath>Объект.КодСортировки</DataPath>
+					<ContextMenu name="КодСортировкиКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КодСортировкиРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="СпособАгрегации" id="43">
+					<DataPath>Объект.СпособАгрегации</DataPath>
+					<ContextMenu name="СпособАгрегацииКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СпособАгрегацииРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<TextDocumentField name="ЗаголовокКолонки" id="24">
+					<DataPath>Объект.ЗаголовокКолонкиФормула</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формула заголовка колонки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если для колонки задана формула, то наименование колонки в электронных документах будет формироваться по формуле, иначе - из наименования колонки. </v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<Height>3</Height>
+					<ContextMenu name="ЗаголовокКолонкиКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ЗаголовокКолонкиРасширеннаяПодсказка" id="26">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;font Arial&gt;&lt;fontsize 10&gt;Если для колонки задана формула, то наименование колонки в электронных документах будет формироваться по формуле, иначе - из наименования колонки. &lt;/&gt;&lt;/&gt;
+
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;Доступные функции&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;:&lt;/&gt;&lt;/&gt;
+
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #0000FF&gt;ЗначениеРеквизита&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;(ИмяРеквизита)
+&lt;/&gt;&lt;/&gt;&lt;b&gt;Описание&lt;/&gt;: Получает значение реквизита текущего документа по заданному имени реквизита. Имя реквизита задается в справочнике "Аналитики электронных документов", реквизит "Имя реквизита".
+
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;Параметры&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;:&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;ИмяРеквизита&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt; (обязательный)&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;Тип: Строка&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;Имя реквизита документа, по которому нужно получить значение из текущего электронного документа.&lt;/&gt;&lt;/&gt;
+
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;Пример&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;:&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;bgcolorstyle -1&gt;ЗначениеРеквизита("Период")&lt;/&gt;&lt;/&gt;&lt;/&gt;
+
+&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;bgcolor #F7F7F7&gt;------------------------------------------------------------------------------------------------------------------------------------------------------------&lt;/&gt;&lt;/&gt;&lt;/&gt;
+
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #0000FF&gt;ПериодСоСдвигом&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;(Период, ТипСдвига, Сдвиг) &lt;/&gt;&lt;/&gt;
+&lt;b&gt;Описание&lt;/&gt;: Получает период со сдвигом от заданного периода.
+
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;Параметры&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;:&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;Период&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt; (обязательный)&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;color #000000&gt;Тип: Значение справочника "Периоды" &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;color #000000&gt;. &lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;Период, по которому нужно получить новый период со сдвигом.&lt;/&gt;&lt;/&gt;
+
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;ТипСдвига&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt; (обязательный)&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;Тип: Строка&lt;/&gt;&lt;/&gt;
+
+&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;color #000000&gt;Допустимые значения:&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;"Год"&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;"Полугодие"&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;"Квартал"&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;"Месяц"&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;"Неделя"&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;"День"&lt;/&gt;&lt;/&gt;
+
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;Сдвиг&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt; (необязательный)&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;Тип: Число&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;По умолчанию = 0&lt;/&gt;&lt;/&gt;
+
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;Пример&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;:&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;bgcolorstyle -1&gt;ПериодСоСдвигом( ЗначениеРеквизита("Период"), "Год", -2)&lt;/&gt;&lt;/&gt;&lt;/&gt;
+
+&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #F7F7F7&gt;-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+
+</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</TextDocumentField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ЭД_Колонки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<DataProcessor uuid="a93a09c3-f5b8-4aa4-b093-97ffa6a59d17">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.msИмпортИзExcel_NativeXLSX" category="Object">
+				<xr:TypeId>d6aadbeb-ced2-44a2-aeae-84885bf23f00</xr:TypeId>
+				<xr:ValueId>9bb94a31-a6c1-428b-a5e9-b4af24366096</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.msИмпортИзExcel_NativeXLSX" category="Manager">
+				<xr:TypeId>38e3c6df-8a47-4585-8f49-4ff42dba8f2a</xr:TypeId>
+				<xr:ValueId>5c874264-1dec-46c8-a128-d7b04c51c7af</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>msИмпортИзExcel_NativeXLSX</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт из Excel. Метод "NativeXLSX" (1C ЧтениеXML)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>//___m.s.__20140317___DNovoselov___          импорт взят с http://infostart.ru/public/225624/         (SBS: Загрузка из EXCEL в 1С /3+1 метод/. Чтение файла XLSX средствами 1С)</Comment>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.msИмпортИзExcel_NativeXLSX.Form.Форма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>Форма</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>
