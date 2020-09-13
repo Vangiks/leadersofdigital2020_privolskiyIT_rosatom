@@ -49,7 +49,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</xr:Item>
 			</DefaultRoles>
 			<Vendor>МКСКОМ</Vendor>
-			<Version>1.0.0.1</Version>
+			<Version>1.0.1.0</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -173,7 +173,7 @@
 				</app:permission>
 			</RequiredMobileApplicationPermissions>
 			<StandaloneConfigurationRestrictionRoles/>
-			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
+			<MainClientApplicationWindowMode>Workplace</MainClientApplicationWindowMode>
 			<DefaultInterface/>
 			<DefaultStyle>Style.ЕПЦО</DefaultStyle>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
@@ -564,6 +564,9 @@
 			<CommonPicture>РазделГлавное</CommonPicture>
 			<CommonPicture>РазделНСИ</CommonPicture>
 			<CommonPicture>РазделОтчетности</CommonPicture>
+			<CommonPicture>НачальнаяСтраница</CommonPicture>
+			<CommonPicture>Телефон</CommonPicture>
+			<CommonPicture>Почта</CommonPicture>
 			<SessionParameter>АвторизованныйПользователь</SessionParameter>
 			<SessionParameter>БуферОбмена</SessionParameter>
 			<SessionParameter>ВерсияРасширений</SessionParameter>
@@ -802,7 +805,9 @@
 			<XDTOPackage>DataDump_1_0_2_1</XDTOPackage>
 			<XDTOPackage>Сообщения</XDTOPackage>
 			<XDTOPackage>CurrencyRates</XDTOPackage>
+			<XDTOPackage>EPCOPackageExchange</XDTOPackage>
 			<WebService>InterfaceVersion</WebService>
+			<WSReference>CBR_DailyInfoWebServ</WSReference>
 			<EventSubscription>ВключитьРегламентноеЗаданиеПриИзмененииФункциональнойОпции</EventSubscription>
 			<EventSubscription>ВыполнитьДействияПередЗаписьюПрисоединенногоФайла</EventSubscription>
 			<EventSubscription>ВыполнитьДействияПередУдалениемПрисоединенногоФайла</EventSubscription>
@@ -1078,6 +1083,7 @@
 			<Report>ПрогрессОтложенногоОбновления</Report>
 			<Report>СведенияОПользователях</Report>
 			<Report>ПроверкаВнедренияБСП</Report>
+			<Report>ДвижениеДС</Report>
 			<DataProcessor>АвтоматическоеИзвлечениеТекстов</DataProcessor>
 			<DataProcessor>АктивныеПользователи</DataProcessor>
 			<DataProcessor>БлокировкаРаботыПользователей</DataProcessor>

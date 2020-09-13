@@ -51,6 +51,11 @@
 							<CommandName>Form.Command.ПодборИзКлассификатора</CommandName>
 							<ExtendedTooltip name="ФормаПодборИзКлассификатораРасширеннаяПодсказка" id="51"/>
 						</Button>
+						<Button name="ЗагрузитьВалютыИзЦБ" id="89">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ЗагрузитьВалютыИзЦБ</CommandName>
+							<ExtendedTooltip name="ЗагрузитьВалютыИзЦБРасширеннаяПодсказка" id="90"/>
+						</Button>
 						<Button name="СоздатьВалюту" id="85">
 							<Type>CommandBarButton</Type>
 							<CommandName>Form.StandardCommand.Create</CommandName>
@@ -314,6 +319,21 @@
 				<Item>FunctionalOption.СтандартныеПодсистемыВЛокальномРежиме</Item>
 			</FunctionalOptions>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьВалютыИзЦБ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить валюты из ЦБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить валюты из ЦБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьВалютыИзЦБ</Action>
 		</Command>
 	</Commands>
 </Form>

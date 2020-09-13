@@ -5,11 +5,63 @@
 	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="209">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<TextColor>style:AccentColor</TextColor>
+				<BackColor>style:ActivityColor</BackColor>
+				<BorderColor>style:AccentColor</BorderColor>
+				<Font ref="style:ВажнаяНадписьШрифт" kind="StyleItem"/>
+				<Picture>
+					<xr:Ref>CommonPicture.Пометка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить и закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="210"/>
+			</Button>
+			<Button name="ФормаПровести" id="211">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.SaveFile</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="212"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="213">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="214"/>
+			</Button>
 			<Button name="ФормаВыгрузить" id="116">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.Выгрузить</CommandName>
 				<BackColor>style:ДобавленныйРеквизитФон</BackColor>
 				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Picture>
+					<xr:Ref>CommonPicture.ПереслатьПисьмоКакВложение</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отправить в ГО .xml</v8:content>
+					</v8:item>
+				</Title>
 				<ExtendedTooltip name="ФормаВыгрузитьРасширеннаяПодсказка" id="117"/>
 			</Button>
 			<Button name="ФормаЗагрузить" id="154">
@@ -17,6 +69,16 @@
 				<CommandName>Form.Command.Загрузить</CommandName>
 				<BackColor>style:ДобавленныйРеквизитФон</BackColor>
 				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Picture>
+					<xr:Ref>CommonPicture.ФорматExcel</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Загрузить из Excel</v8:content>
+					</v8:item>
+				</Title>
 				<ExtendedTooltip name="ФормаЗагрузитьРасширеннаяПодсказка" id="155"/>
 			</Button>
 			<Button name="ФормаСохранитьВЭксель" id="189">
@@ -65,16 +127,31 @@
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОрганизацияОтчета" id="244">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация отчета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация отчета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОрганизацияОтчетаРасширеннаяПодсказка" id="245"/>
+			<ChildItems>
 				<InputField name="Организация" id="61">
 					<DataPath>Объект.Организация</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="62"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="63"/>
 				</InputField>
-				<LabelField name="ОрганизацияID" id="118">
-					<DataPath>Объект.Организация.ID</DataPath>
-					<ContextMenu name="ОрганизацияIDКонтекстноеМеню" id="119"/>
-					<ExtendedTooltip name="ОрганизацияIDРасширеннаяПодсказка" id="120"/>
-				</LabelField>
 				<LabelField name="ОрганизацияИНН" id="121">
 					<DataPath>Объект.Организация.ИНН</DataPath>
 					<ContextMenu name="ОрганизацияИННКонтекстноеМеню" id="122"/>
@@ -82,11 +159,19 @@
 				</LabelField>
 				<LabelField name="ОрганизацияКПП" id="124">
 					<DataPath>Объект.Организация.КПП</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="ОрганизацияКППКонтекстноеМеню" id="125"/>
 					<ExtendedTooltip name="ОрганизацияКППРасширеннаяПодсказка" id="126"/>
 				</LabelField>
+				<LabelField name="ОрганизацияID" id="118">
+					<DataPath>Объект.Организация.ID</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ОрганизацияIDКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="ОрганизацияIDРасширеннаяПодсказка" id="120"/>
+				</LabelField>
 				<LabelField name="ОрганизацияТип" id="127">
 					<DataPath>Объект.Организация.Тип</DataPath>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -117,7 +202,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Остатки</v8:content>
+							<v8:content>Контрагенты / Остатки на счетах</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -135,7 +220,46 @@
 							<DataPath>Объект.ОстаткиПоСчетам</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ОстаткиПоСчетамКонтекстноеМеню" id="67"/>
-							<AutoCommandBar name="ОстаткиПоСчетамКоманднаяПанель" id="68"/>
+							<AutoCommandBar name="ОстаткиПоСчетамКоманднаяПанель" id="68">
+								<ChildItems>
+									<Button name="ОстаткиПоСчетамДобавить" id="197">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ОстаткиПоСчетам.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ОстаткиПоСчетамДобавитьРасширеннаяПодсказка" id="198"/>
+									</Button>
+									<Button name="ОстаткиПоСчетамСкопировать" id="207">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ОстаткиПоСчетам.StandardCommand.Copy</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ОстаткиПоСчетамСкопироватьРасширеннаяПодсказка" id="208"/>
+									</Button>
+									<Button name="ОстаткиПоСчетамУдалить" id="205">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ОстаткиПоСчетам.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ОстаткиПоСчетамУдалитьРасширеннаяПодсказка" id="206"/>
+									</Button>
+									<ButtonGroup name="ОстаткиПоСчетамГруппа1" id="203">
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ОстаткиПоСчетамГруппа1РасширеннаяПодсказка" id="204"/>
+										<ChildItems>
+											<Button name="ОстаткиПоСчетамПереместитьВверх" id="199">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ОстаткиПоСчетам.StandardCommand.MoveUp</CommandName>
+												<ExtendedTooltip name="ОстаткиПоСчетамПереместитьВверхРасширеннаяПодсказка" id="200"/>
+											</Button>
+											<Button name="ОстаткиПоСчетамПереместитьВниз" id="201">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ОстаткиПоСчетам.StandardCommand.MoveDown</CommandName>
+												<ExtendedTooltip name="ОстаткиПоСчетамПереместитьВнизРасширеннаяПодсказка" id="202"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ОстаткиПоСчетамРасширеннаяПодсказка" id="69"/>
 							<SearchStringAddition name="ОстаткиПоСчетамСтрокаПоиска" id="70">
 								<AdditionSource>
@@ -164,7 +288,12 @@
 							<ChildItems>
 								<LabelField name="ОстаткиПоСчетамНомерСтроки" id="79">
 									<DataPath>Объект.ОстаткиПоСчетам.LineNumber</DataPath>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>3</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ОстаткиПоСчетамНомерСтрокиКонтекстноеМеню" id="80"/>
 									<ExtendedTooltip name="ОстаткиПоСчетамНомерСтрокиРасширеннаяПодсказка" id="81"/>
 								</LabelField>
@@ -177,33 +306,42 @@
 								<LabelField name="ОстаткиПоСчетамОрганизацияID" id="156">
 									<DataPath>Объект.ОстаткиПоСчетам.Организация.ID</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ОстаткиПоСчетамОрганизацияIDКонтекстноеМеню" id="157"/>
 									<ExtendedTooltip name="ОстаткиПоСчетамОрганизацияIDРасширеннаяПодсказка" id="158"/>
 								</LabelField>
 								<LabelField name="ОстаткиПоСчетамОрганизацияИНН" id="159">
 									<DataPath>Объект.ОстаткиПоСчетам.Организация.ИНН</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ОстаткиПоСчетамОрганизацияИННКонтекстноеМеню" id="160"/>
 									<ExtendedTooltip name="ОстаткиПоСчетамОрганизацияИННРасширеннаяПодсказка" id="161"/>
 								</LabelField>
 								<LabelField name="ОстаткиПоСчетамОрганизацияКПП" id="162">
 									<DataPath>Объект.ОстаткиПоСчетам.Организация.КПП</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ОстаткиПоСчетамОрганизацияКППКонтекстноеМеню" id="163"/>
 									<ExtendedTooltip name="ОстаткиПоСчетамОрганизацияКППРасширеннаяПодсказка" id="164"/>
 								</LabelField>
 								<LabelField name="ОстаткиПоСчетамОрганизацияНаименование" id="171">
 									<DataPath>Объект.ОстаткиПоСчетам.Организация.Description</DataPath>
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Наименование организации</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ОстаткиПоСчетамОрганизацияНаименованиеКонтекстноеМеню" id="172"/>
 									<ExtendedTooltip name="ОстаткиПоСчетамОрганизацияНаименованиеРасширеннаяПодсказка" id="173"/>
 								</LabelField>
@@ -216,13 +354,17 @@
 											<v8:content>ГО/ФЛ</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ОстаткиПоСчетамОрганизацияТипКонтекстноеМеню" id="169"/>
 									<ExtendedTooltip name="ОстаткиПоСчетамОрганизацияТипРасширеннаяПодсказка" id="170"/>
 								</LabelField>
 								<LabelField name="ОстаткиПоСчетамБанкБИК" id="148">
 									<DataPath>Объект.ОстаткиПоСчетам.Банк.Code</DataPath>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ОстаткиПоСчетамБанкБИККонтекстноеМеню" id="149"/>
 									<ExtendedTooltip name="ОстаткиПоСчетамБанкБИКРасширеннаяПодсказка" id="150"/>
 								</LabelField>
@@ -270,7 +412,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Финансовые сделки</v8:content>
+							<v8:content>Размещенные и привлеченные средства</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -288,7 +430,47 @@
 							<DataPath>Объект.ФинансовыеСделки</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ФинансовыеСделкиКонтекстноеМеню" id="92"/>
-							<AutoCommandBar name="ФинансовыеСделкиКоманднаяПанель" id="93"/>
+							<AutoCommandBar name="ФинансовыеСделкиКоманднаяПанель" id="93">
+								<ChildItems>
+									<Button name="ФинансовыеСделкиДобавить" id="232">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ФинансовыеСделки.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ФинансовыеСделкиДобавитьРасширеннаяПодсказка" id="233"/>
+									</Button>
+									<Button name="ФинансовыеСделкиСкопировать" id="234">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ФинансовыеСделки.StandardCommand.Copy</CommandName>
+										<RepresentationInContextMenu>None</RepresentationInContextMenu>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ФинансовыеСделкиСкопироватьРасширеннаяПодсказка" id="235"/>
+									</Button>
+									<Button name="ФинансовыеСделкиУдалить" id="236">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ФинансовыеСделки.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="ФинансовыеСделкиУдалитьРасширеннаяПодсказка" id="237"/>
+									</Button>
+									<ButtonGroup name="ФинансовыеСделкиГруппа1" id="242">
+										<Representation>Compact</Representation>
+										<ExtendedTooltip name="ФинансовыеСделкиГруппа1РасширеннаяПодсказка" id="243"/>
+										<ChildItems>
+											<Button name="ФинансовыеСделкиПереместитьВверх" id="238">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ФинансовыеСделки.StandardCommand.MoveUp</CommandName>
+												<ExtendedTooltip name="ФинансовыеСделкиПереместитьВверхРасширеннаяПодсказка" id="239"/>
+											</Button>
+											<Button name="ФинансовыеСделкиПереместитьВниз" id="240">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ФинансовыеСделки.StandardCommand.MoveDown</CommandName>
+												<ExtendedTooltip name="ФинансовыеСделкиПереместитьВнизРасширеннаяПодсказка" id="241"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ФинансовыеСделкиРасширеннаяПодсказка" id="94"/>
 							<SearchStringAddition name="ФинансовыеСделкиСтрокаПоиска" id="95">
 								<AdditionSource>
@@ -317,7 +499,12 @@
 							<ChildItems>
 								<LabelField name="ФинансовыеСделкиНомерСтроки" id="104">
 									<DataPath>Объект.ФинансовыеСделки.LineNumber</DataPath>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>3</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиНомерСтрокиКонтекстноеМеню" id="105"/>
 									<ExtendedTooltip name="ФинансовыеСделкиНомерСтрокиРасширеннаяПодсказка" id="106"/>
 								</LabelField>
@@ -329,24 +516,31 @@
 								</InputField>
 								<LabelField name="ФинансовыеСделкиОрганизацияID" id="174">
 									<DataPath>Объект.ФинансовыеСделки.Организация.ID</DataPath>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиОрганизацияIDКонтекстноеМеню" id="175"/>
 									<ExtendedTooltip name="ФинансовыеСделкиОрганизацияIDРасширеннаяПодсказка" id="176"/>
 								</LabelField>
 								<LabelField name="ФинансовыеСделкиОрганизацияИНН" id="177">
 									<DataPath>Объект.ФинансовыеСделки.Организация.ИНН</DataPath>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиОрганизацияИННКонтекстноеМеню" id="178"/>
 									<ExtendedTooltip name="ФинансовыеСделкиОрганизацияИННРасширеннаяПодсказка" id="179"/>
 								</LabelField>
 								<LabelField name="ФинансовыеСделкиОрганизацияКПП" id="180">
 									<DataPath>Объект.ФинансовыеСделки.Организация.КПП</DataPath>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиОрганизацияКППКонтекстноеМеню" id="181"/>
 									<ExtendedTooltip name="ФинансовыеСделкиОрганизацияКППРасширеннаяПодсказка" id="182"/>
 								</LabelField>
 								<LabelField name="ФинансовыеСделкиОрганизацияСсылка" id="186">
 									<DataPath>Объект.ФинансовыеСделки.Организация.Ref</DataPath>
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -365,7 +559,9 @@
 											<v8:content>ГО/ФЛ</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиОрганизацияТипКонтекстноеМеню" id="184"/>
 									<ExtendedTooltip name="ФинансовыеСделкиОрганизацияТипРасширеннаяПодсказка" id="185"/>
 								</LabelField>
@@ -378,35 +574,45 @@
 								<LabelField name="ФинансовыеСделкиСделкаВидДоговора" id="130">
 									<DataPath>Объект.ФинансовыеСделки.Сделка.ВидДоговора</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиСделкаВидДоговораКонтекстноеМеню" id="131"/>
 									<ExtendedTooltip name="ФинансовыеСделкиСделкаВидДоговораРасширеннаяПодсказка" id="132"/>
 								</LabelField>
 								<LabelField name="ФинансовыеСделкиСделкаДатаЗаключения" id="133">
 									<DataPath>Объект.ФинансовыеСделки.Сделка.ДатаЗаключения</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиСделкаДатаЗаключенияКонтекстноеМеню" id="134"/>
 									<ExtendedTooltip name="ФинансовыеСделкиСделкаДатаЗаключенияРасширеннаяПодсказка" id="135"/>
 								</LabelField>
 								<LabelField name="ФинансовыеСделкиСделкаДатаНачалаДействия" id="136">
 									<DataPath>Объект.ФинансовыеСделки.Сделка.ДатаНачалаДействия</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиСделкаДатаНачалаДействияКонтекстноеМеню" id="137"/>
 									<ExtendedTooltip name="ФинансовыеСделкиСделкаДатаНачалаДействияРасширеннаяПодсказка" id="138"/>
 								</LabelField>
 								<LabelField name="ФинансовыеСделкиСделкаДатаОкончания" id="139">
 									<DataPath>Объект.ФинансовыеСделки.Сделка.ДатаОкончания</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиСделкаДатаОкончанияКонтекстноеМеню" id="140"/>
 									<ExtendedTooltip name="ФинансовыеСделкиСделкаДатаОкончанияРасширеннаяПодсказка" id="141"/>
 								</LabelField>
 								<LabelField name="ФинансовыеСделкиСделкаРасчетнаяСтавка" id="142">
 									<DataPath>Объект.ФинансовыеСделки.Сделка.РасчетнаяСтавка</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#D7D7D7</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#D7D7D7</BackColor>
 									<ContextMenu name="ФинансовыеСделкиСделкаРасчетнаяСтавкаКонтекстноеМеню" id="143"/>
 									<ExtendedTooltip name="ФинансовыеСделкиСделкаРасчетнаяСтавкаРасширеннаяПодсказка" id="144"/>
 								</LabelField>
@@ -429,12 +635,86 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<InputField name="Автор" id="151">
-			<DataPath>Объект.Автор</DataPath>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<ContextMenu name="АвторКонтекстноеМеню" id="152"/>
-			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="153"/>
-		</InputField>
+		<UsualGroup name="ГруппаПодвал" id="215">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="216"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="246">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="247"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация3" id="229">
+							<Picture>
+								<xr:Ref>CommonPicture.СостояниеПользователя02</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="230"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="231"/>
+						</PictureDecoration>
+						<InputField name="Автор" id="151">
+							<DataPath>Объект.Автор</DataPath>
+							<Width>40</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="АвторКонтекстноеМеню" id="152"/>
+							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="153"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="248">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="249"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация1" id="223">
+							<Picture>
+								<xr:Ref>CommonPicture.Телефон</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="224"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="225"/>
+						</PictureDecoration>
+						<LabelField name="АвторТелефон" id="217">
+							<DataPath>Объект.Автор.Телефон</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="АвторТелефонКонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="АвторТелефонРасширеннаяПодсказка" id="219"/>
+						</LabelField>
+						<PictureDecoration name="Декорация2" id="226">
+							<Picture>
+								<xr:Ref>CommonPicture.Почта</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="228"/>
+						</PictureDecoration>
+						<LabelField name="АвторАдресЭлектроннойПочты" id="220">
+							<DataPath>Объект.Автор.АдресЭлектроннойПочты</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="АвторАдресЭлектроннойПочтыКонтекстноеМеню" id="221"/>
+							<ExtendedTooltip name="АвторАдресЭлектроннойПочтыРасширеннаяПодсказка" id="222"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

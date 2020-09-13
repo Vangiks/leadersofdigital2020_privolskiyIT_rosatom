@@ -1,0 +1,38 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn://epco/epcopackageexchange/0.0.1">
+	<valueType name="TypeSum15_2" base="xs:decimal" totalDigits="15" fractionDigits="2"/>
+	<objectType name="Organization">
+		<property name="ID" type="xs:string"/>
+		<property name="Name" type="xs:string"/>
+		<property name="INN" type="xs:string"/>
+		<property name="KPP" type="xs:string"/>
+	</objectType>
+	<objectType name="Bank">
+		<property name="Name" type="xs:string"/>
+		<property name="BIK" type="xs:string"/>
+		<property name="INN" type="xs:string"/>
+	</objectType>
+	<objectType name="Contract">
+		<property name="Name" type="xs:string"/>
+		<property name="Currency" type="xs:string"/>
+		<property name="Date" type="xs:date"/>
+		<property name="StartDate" type="xs:date"/>
+		<property name="EndDate" type="xs:date"/>
+	</objectType>
+	<objectType name="BanksRow">
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="Organization" type="d3p1:Organization"/>
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="Bank" type="d3p1:Bank"/>
+		<property name="Currency" type="xs:string"/>
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="Sum" type="d3p1:TypeSum15_2"/>
+		<property name="Comment" type="xs:string"/>
+	</objectType>
+	<objectType name="ContractsRow">
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="Organization" type="d3p1:Organization"/>
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="Contract" type="d3p1:Contract"/>
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="Sum" type="d3p1:TypeSum15_2"/>
+	</objectType>
+	<objectType name="Package">
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="Organization" type="d3p1:Organization"/>
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="BanksList" type="d3p1:BanksRow" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="urn://epco/epcopackageexchange/0.0.1" name="ContractsList" type="d3p1:ContractsRow" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

@@ -40,8 +40,14 @@
 			<ChildItems>
 				<Button name="ФормаЗагрузитьКлассификатор" id="16">
 					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
 					<CommandName>Form.Command.ЗагрузитьКлассификатор</CommandName>
 					<ExtendedTooltip name="ФормаЗагрузитьКлассификаторExtendedTooltip" id="17"/>
+				</Button>
+				<Button name="ФормаЗагрузитьБанкиИзЦБ" id="40">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ЗагрузитьБанкиИзЦБ</CommandName>
+					<ExtendedTooltip name="ФормаЗагрузитьБанкиИзЦБРасширеннаяПодсказка" id="41"/>
 				</Button>
 			</ChildItems>
 		</CommandBar>
@@ -213,6 +219,26 @@
 			</ToolTip>
 			<Action>ЗагрузитьКлассификатор</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьБанкиИзЦБ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить банки из ЦБ...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить банки из ЦБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОбновлениеВнешнихКомпонентССайта</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьБанкиИзЦБ</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

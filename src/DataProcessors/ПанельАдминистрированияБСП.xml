@@ -226,7 +226,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Интернет-поддержка и сервисы</v8:content>
+							<v8:content>Настройки загрузки справочников</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -238,7 +238,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Интернет-сервисы и поддержка. Обновление версии программы. Загрузка классификаторов.</v8:content>
+							<v8:content>Настройки / загрузка классификаторов банков и обновление курсов</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Picture/>

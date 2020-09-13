@@ -40,7 +40,7 @@
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Интернет-сервисы и поддержка. Обновление версии программы. Загрузка классификаторов.</v8:content>
+							<v8:content>Настройки / загрузка классификаторов банков и обновление курсов</v8:content>
 						</v8:item>
 					</Title>
 					<VerticalAlign>Top</VerticalAlign>
@@ -203,7 +203,6 @@
 			</Title>
 			<Group>AlwaysHorizontal</Group>
 			<Behavior>Collapsible</Behavior>
-			<Collapsed>true</Collapsed>
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<Representation>NormalSeparation</Representation>
 			<ChildItemsWidth>Equal</ChildItemsWidth>
@@ -497,12 +496,18 @@
 								<Button name="ОбработкаЗагрузкаКлассификатораБанковЗагрузкаКлассификаторовБанковЦБ" id="1944">
 									<Type>Hyperlink</Type>
 									<CommandName>DataProcessor.ЗагрузкаКлассификатораБанков.Command.ЗагрузкаКлассификаторовБанковЦБ</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузка банков</v8:content>
+										</v8:item>
+									</Title>
 									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 									<ExtendedTooltip name="ОбработкаЗагрузкаКлассификатораБанковЗагрузкаКлассификаторовБанковЦБРасширеннаяПодсказка" id="1945">
 										<Title formatted="false">
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Загрузка классификаторов банков</v8:content>
+												<v8:content>Загрузка банков из ЦБ</v8:content>
 											</v8:item>
 										</Title>
 									</ExtendedTooltip>

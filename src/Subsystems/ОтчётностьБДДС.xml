@@ -27,6 +27,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЭлектронногоДокумента</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЭлектронногоДокумента</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.СрокСдачиОтчетности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НачальнаяСтраница</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДвижениеДС</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

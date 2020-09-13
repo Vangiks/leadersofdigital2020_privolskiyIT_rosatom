@@ -1,21 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Единый портал цифровой отчетности Росатома</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
 	<HorizontalAlign>Center</HorizontalAlign>
 	<VerticalAlign>Center</VerticalAlign>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
-		<ChildItems>
-			<Button name="ФормаНачальнаяСтраница" id="29">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.НачальнаяСтраница</CommandName>
-				<ExtendedTooltip name="ФормаНачальнаяСтраницаРасширеннаяПодсказка" id="30"/>
-			</Button>
-		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<PictureDecoration name="НачальнаяСтраница" id="40">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НачальнаяСтраница</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<GroupVerticalAlign>Top</GroupVerticalAlign>
+			<Hyperlink>true</Hyperlink>
+			<Picture>
+				<xr:Abs>Picture.png</xr:Abs>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="НачальнаяСтраницаКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="НачальнаяСтраницаРасширеннаяПодсказка" id="42"/>
+			<Events>
+				<Event name="Click">НачальнаяСтраницаНажатие</Event>
+			</Events>
+		</PictureDecoration>
 		<UsualGroup name="ГруппаПодсистемы" id="7">
 			<Group>AlwaysHorizontal</Group>
 			<ShowTitle>false</ShowTitle>
@@ -71,6 +91,9 @@
 					</Picture>
 					<ContextMenu name="АналитикаКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="АналитикаРасширеннаяПодсказка" id="14"/>
+					<Events>
+						<Event name="Click">АналитикаНажатие</Event>
+					</Events>
 				</PictureDecoration>
 				<PictureDecoration name="Администратор" id="9">
 					<Title formatted="false">
@@ -86,32 +109,173 @@
 					</Picture>
 					<ContextMenu name="АдминистраторКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="АдминистраторРасширеннаяПодсказка" id="11"/>
+					<Events>
+						<Event name="Click">АдминистраторНажатие</Event>
+					</Events>
 				</PictureDecoration>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаСправочники" id="15">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа справочники</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа справочники</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСправочникиРасширеннаяПодсказка" id="16"/>
 			<ChildItems>
-				<PictureDecoration name="Справочник_Валюты_ФормаСписка" id="26">
+				<UsualGroup name="Справочники1" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Справочники1РасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<PictureDecoration name="Справочник_Валюты_ФормаСписка" id="26">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валюты</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Abs>Picture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Справочник_Валюты_ФормаСпискаКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="Справочник_Валюты_ФормаСпискаРасширеннаяПодсказка" id="28"/>
+							<Events>
+								<Event name="Click">Справочник_Валюты_ФормаСпискаНажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<PictureDecoration name="Справочник_Организации_ФормаСписка" id="17">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организации</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Abs>Picture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Справочник_Организации_ФормаСпискаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="Справочник_Организации_ФормаСпискаРасширеннаяПодсказка" id="19"/>
+							<Events>
+								<Event name="Click">Справочник_Организации_ФормаСпискаНажатие</Event>
+							</Events>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Справочники3" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники3</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники3</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Справочники3РасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="37">
+							<Width>20</Width>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="39"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Справочники2" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Справочники2РасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<PictureDecoration name="Справочник_КлассификаторБанков_ФормаСписка" id="20">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кредитные организации</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Abs>Picture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Справочник_КлассификаторБанков_ФормаСпискаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="Справочник_КлассификаторБанков_ФормаСпискаРасширеннаяПодсказка" id="22"/>
+							<Events>
+								<Event name="Click">Справочник_КлассификаторБанков_ФормаСпискаНажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<PictureDecoration name="Справочник_ФинансовыеСделки_ФормаСписка" id="23">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Финансовые сделки</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Abs>Picture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="Справочник_ФинансовыеСделки_ФормаСпискаКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="Справочник_ФинансовыеСделки_ФормаСпискаРасширеннаяПодсказка" id="25"/>
+							<Events>
+								<Event name="Click">Справочник_ФинансовыеСделки_ФормаСпискаНажатие</Event>
+							</Events>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАдминистратор" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Администратор</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАдминистраторРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<PictureDecoration name="НастройкаПользователейИПрав" id="45">
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Валюты</v8:content>
+							<v8:content>Настройка пользователей и прав</v8:content>
 						</v8:item>
 					</Title>
 					<Hyperlink>true</Hyperlink>
@@ -119,17 +283,17 @@
 						<xr:Abs>Picture.png</xr:Abs>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
-					<ContextMenu name="Справочник_Валюты_ФормаСпискаКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="Справочник_Валюты_ФормаСпискаРасширеннаяПодсказка" id="28"/>
+					<ContextMenu name="НастройкаПользователейИПравКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="НастройкаПользователейИПравРасширеннаяПодсказка" id="47"/>
 					<Events>
-						<Event name="Click">Справочники_ВалютыНажатие</Event>
+						<Event name="Click">НастройкаПользователейИПравНажатие</Event>
 					</Events>
 				</PictureDecoration>
-				<PictureDecoration name="Справочник_Организации_ФормаСписка" id="17">
+				<PictureDecoration name="НастройкаЗагрузкиСправочников" id="48">
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Организации</v8:content>
+							<v8:content>Настройка загрузки справочников</v8:content>
 						</v8:item>
 					</Title>
 					<Hyperlink>true</Hyperlink>
@@ -137,46 +301,10 @@
 						<xr:Abs>Picture.png</xr:Abs>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
-					<ContextMenu name="Справочник_Организации_ФормаСпискаКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="Справочник_Организации_ФормаСпискаРасширеннаяПодсказка" id="19"/>
+					<ContextMenu name="НастройкаЗагрузкиСправочниковКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="НастройкаЗагрузкиСправочниковРасширеннаяПодсказка" id="50"/>
 					<Events>
-						<Event name="Click">Справочники_ОрганизацииНажатие</Event>
-					</Events>
-				</PictureDecoration>
-				<PictureDecoration name="Справочник_КлассификаторБанков_ФормаСписка" id="20">
-					<Title formatted="false">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Кредитные организации</v8:content>
-						</v8:item>
-					</Title>
-					<Hyperlink>true</Hyperlink>
-					<Picture>
-						<xr:Abs>Picture.png</xr:Abs>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
-					</Picture>
-					<ContextMenu name="Справочник_КлассификаторБанков_ФормаСпискаКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="Справочник_КлассификаторБанков_ФормаСпискаРасширеннаяПодсказка" id="22"/>
-					<Events>
-						<Event name="Click">Справочники_КредитныеОрганизацииНажатие</Event>
-					</Events>
-				</PictureDecoration>
-				<PictureDecoration name="Справочник_ФинансовыеСделки_ФормаСписка" id="23">
-					<Title formatted="false">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Финансовые сделки</v8:content>
-						</v8:item>
-					</Title>
-					<Hyperlink>true</Hyperlink>
-					<Picture>
-						<xr:Abs>Picture.png</xr:Abs>
-						<xr:LoadTransparent>false</xr:LoadTransparent>
-					</Picture>
-					<ContextMenu name="Справочник_ФинансовыеСделки_ФормаСпискаКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="Справочник_ФинансовыеСделки_ФормаСпискаРасширеннаяПодсказка" id="25"/>
-					<Events>
-						<Event name="Click">Справочники_ФинансовыеСделкиНажатие</Event>
+						<Event name="Click">НастройкаЗагрузкиСправочниковНажатие</Event>
 					</Events>
 				</PictureDecoration>
 			</ChildItems>
@@ -190,22 +318,4 @@
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
 	</Attributes>
-	<Commands>
-		<Command name="НачальнаяСтраница" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Начальная страница</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Начальная страница</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>НачальнаяСтраница</Action>
-			<Representation>TextPicture</Representation>
-		</Command>
-	</Commands>
 </Form>
