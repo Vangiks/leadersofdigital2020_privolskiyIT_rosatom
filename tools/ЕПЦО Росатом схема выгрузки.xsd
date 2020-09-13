@@ -1,0 +1,55 @@
+﻿<xs:schema xmlns:tns="urn://epco/epcopackageexchange/0.0.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn://epco/epcopackageexchange/0.0.1" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:complexType name="Bank">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="BIK" type="xs:string"/>
+			<xs:element name="INN" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BanksRow">
+		<xs:sequence>
+			<xs:element name="Organization" type="tns:Organization"/>
+			<xs:element name="Bank" type="tns:Bank"/>
+			<xs:element name="Currency" type="xs:string"/>
+			<xs:element name="Sum" type="tns:TypeSum15_2"/>
+			<xs:element name="Comment" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Contract">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Currency" type="xs:string"/>
+			<xs:element name="Date" type="xs:date"/>
+			<xs:element name="StartDate" type="xs:date"/>
+			<xs:element name="EndDate" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContractsRow">
+		<xs:sequence>
+			<xs:element name="Organization" type="tns:Organization"/>
+			<xs:element name="Contract" type="tns:Contract"/>
+			<xs:element name="Sum" type="tns:TypeSum15_2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Organization">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="INN" type="xs:string"/>
+			<xs:element name="KPP" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Package">
+		<xs:sequence>
+			<xs:element name="Organization" type="tns:Organization"/>
+			<xs:element name="BanksList" type="tns:BanksRow" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ContractsList" type="tns:ContractsRow" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TypeSum15_2">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="15"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
